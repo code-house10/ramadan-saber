@@ -1,0 +1,367 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>شركة المستقبل لنقل العفش</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Cairo:900,400&subset=arabic,latin-ext" rel="stylesheet">
+<link href="css/italeya.css" rel="stylesheet">
+<link href="css/index.css" rel="stylesheet">
+<script src="jquery-1.12.4.min.js"></script>
+<script src="util.min.js"></script>
+<script src="carousel.min.js"></script>
+<script src="jquery-ui.min.js"></script>
+<script src="wb.photocollage.min.js"></script>
+<script src="popper.min.js"></script>
+<script src="collapse.min.js"></script>
+<script src="dropdown.min.js"></script>
+<script src="wwb16.min.js"></script>
+<script>   
+   $(document).ready(function()
+   {
+      $('#reviewsImage1').addClass('visibility-hidden');
+      $('#portfolio-image2').addClass('visibility-hidden');
+      $("#Carousel1").on('slid.bs.carousel', function(e)
+      {
+         var index = $(e.relatedTarget).index();
+         switch(index)
+         {
+            case 0:
+               AnimateCss('wb_welcomeText5', 'transform-rotate-in', 300, 1000);
+               AnimateCss('welcomeButton3', 'transform-peek', 2000, 1000);
+               break;
+            case 1:
+               AnimateCss('wb_welcomeText3', 'scale-in-horizontal-center', 300, 1000);
+               AnimateCss('welcomeText4', 'scale-in-vertical-center', 1000, 1000);
+               AnimateCss('welcomeButton2', 'twister-down-in', 2000, 1000);
+               break;
+         }
+      });
+      $("#Carousel1").bootstrapcarousel({interval:5000, pause: false});
+      $("a[href*='#galleryLayoutGrid']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_galleryLayoutGrid').offset().top-88 }, 600, 'easeOutCirc');
+      });
+      function onScrollgalleryLayoutGrid()
+      {
+         var $obj = $("#wb_galleryLayoutGrid");
+         if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+         {
+            $obj.addClass("in-viewport");
+            AnimateCss('reviewsImage1', 'animate-fade-in-up', 0, 1000);
+            AnimateCss('portfolio-image2', 'animate-fade-in-up', 500, 1000);
+         }
+      }
+      onScrollgalleryLayoutGrid();
+      $(window).scroll(function(event)
+      {
+         onScrollgalleryLayoutGrid();
+      });
+      $("a[href*='#contactForm']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_contactForm').offset().top }, 600, 'easeInSine');
+      });
+      $("#attractionsCarousel").on('slid.bs.carousel', function(e)
+      {
+         var index = $(e.relatedTarget).index();
+         switch(index)
+         {
+            case 0:
+               $('#Carousel2').bootstrapcarousel(0);
+               break;
+         }
+      });
+      $("#attractionsCarousel").bootstrapcarousel({interval:0, pause: false});
+      $("#galleryCollage").photocollage({ effect: 'css', duration: 600, padding: 20, lazyload: true, matrix: '1,2,0,1,0,0,1,1,1' });
+      $('#navigationMenu .dropdown-toggle').dropdown({popperConfig:{placement:'top-start',modifiers:{computeStyle:{gpuAcceleration:false}}}});
+      $(document).on('click','.navigationMenu-navbar-collapse.show',function(e)
+      {
+         if ($(e.target).is('a') && ($(e.target).attr('class') != 'dropdown-toggle')) 
+         {
+            $(this).collapse('hide');
+         }
+      });
+   });
+</script>
+</head>
+<body>
+   <div id="wb_LayoutGrid3">
+      <div id="LayoutGrid3">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_Text1">
+                  <span style="color:#FFFFFF;">&nbsp; <strong><a href="tel:01275135305 " class="style1">01275135305  </a>- <a href="tel:01002575841" class="style1">01002575841&nbsp;&nbsp;&nbsp; </a>إتصل على&nbsp; </strong><br></span>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_navigation">
+      <div id="navigation">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_navigationMenu">
+                  <div id="navigationMenu" class="navigationMenu" style="width:100%;height:auto !important;">
+                     <div class="container">
+                        <div class="navbar-header">
+                           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navigationMenu-navbar-collapse">
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                           </button>
+                        </div>
+                        <div class="navigationMenu-navbar-collapse collapse">
+                           <ul class="nav navbar-nav">
+                              <li class="nav-item">
+                                 <a href="#contact" class="nav-link">اتصل بنا</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a href="#gallery" class="nav-link">عن الشركة</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a href="#galleryLayoutGrid" class="nav-link">خدماتنا</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a href="#welcome" class="nav-link">الرئيسية</a>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div id="wb_navigationImage">
+                  <img src="images/fec2069c324e39afb12dd397b79006bf.png" id="navigationImage" alt="">
+               </div>
+               <div id="wb_Text3">
+                  <span style="color:#000000;"><strong>شركة المستقبل لنقل العفش</strong></span>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_welcome">
+      <div id="welcome">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_Carousel1">
+                  <div id="Carousel1" class="carousel slide" data-ride="carousel">
+                     <div class="carousel-inner">
+                        <div class="carousel-item active">
+                           <div class="carousel-innerframe">
+                              <a id="welcomeButton3" href="tel:01002575841">اتصل اليوم</a>
+                              <div id="wb_welcomeText5">
+                                 <p style="color:#FFFFFF;"><span style="font-weight:bold;">شركةالمستقبل لنقل العفش</span></p>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="carousel-item">
+                           <div class="carousel-innerframe">
+                              <div id="wb_welcomeText3">
+                                 <p style="font-family:Arial;font-size:13px;line-height:16px;color:#FFFFFF;line-height:26px;"><span style="font-family:Cairo;font-size:15px;font-weight:bold;">شركة المستقبل لنقل العفش</span></p>
+                              </div>
+                              <a id="welcomeButton2" href="tel:01002575841">إتصل اليوم</a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_LayoutGrid2">
+      <div id="LayoutGrid2">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_contactText2">
+                  <p style="font-size:15px;line-height:27.5px;color:#000000;">شركه المستقبل لنقل الاثاث من اقدم و اعرق شركات نقل الاثاث تاسست الشركه عام 1998&nbsp; لاعمال نقل العفش بالقاهره حتى اصبحت من افضل شركات نقل الاثاث فى مصر تقدم الشركه خدمات نقل و تغليف الاثاث و خدمات فك و تركيب الاثاث كما اننا نمتلك اقوى و افضل اجهزه و معدات نقل سيارات و اوناش حديثه لنقل الاثاث بجميع محافظات مصر</p>
+                  <p style="font-family:Arial;font-size:15px;line-height:16.5px;">&nbsp;</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_LayoutGrid1">
+      <div id="LayoutGrid1">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_BootstrapCard4">
+                  <div id="BootstrapCard4-card-body">
+                     <img id="BootstrapCard4-card-item0" src="images/15037087_172328606564720_2620213820621837403_n.jpg" alt="" title="">
+                     <div id="BootstrapCard4-card-item1"><i class="fa fa-dropbox"></i></div>
+                     <div id="BootstrapCard4-card-item2">شركة المستقبل لنقل العفش والاثاث ارخص شركة نقل اثاث فى مصر</div>
+                     <div id="BootstrapCard4-card-item3">خبرتنا فى المجال من سنوات جعلتنا من اوئل الشركات وافضلها لاننا نمتلك اسطول كامل مجهز لنقل العفش والاثاث</div>
+                     <hr id="BootstrapCard4-card-item4">
+                     <div id="BootstrapCard4-card-item5"><a href="tel:01002575841">إتصل بنا</a></div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-2">
+               <div id="wb_Card2">
+                  <div id="Card2-card-body">
+                     <img id="Card2-card-item0" src="images/149025629_361638374942616_3655175475628510167_n.jpg" alt="" title="">
+                     <div id="Card2-card-item1"><i class="fa fa-dropbox"></i></div>
+                     <div id="Card2-card-item2">جميع خدمات نقل الأثاث</div>
+                     <div id="Card2-card-item3">تقدم شركة المستقبل لنقل العفش أفضل وأهم خدمات نقل العفش ، وهي تغليف العفش ، وده علشان حماية قطع الأثاث والأجهزة من أي أضرار أثناء النقل من خدش أو تجريح وكسر</div>
+                     <hr id="Card2-card-item4">
+                     <div id="Card2-card-item5"><a href="tel:01275135305 ">إتصل الأن</a></div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-3">
+               <div id="wb_Card1">
+                  <div id="Card1-card-body">
+                     <img id="Card1-card-item0" src="images/143976804_1716153401923069_210677387881102210_n.jpg" alt="" title="">
+                     <div id="Card1-card-item1"><i class="fa fa-dropbox"></i></div>
+                     <div id="Card1-card-item2">سيارات نقل مغلقة ومجهزة</div>
+                     <div id="Card1-card-item3">تمتلك شركة المستقبل لنقل الأثاث أسطول من سيارات النقل الحديثة والمغلفة والمجهزة لنقل جميع أنواع الأثاث من أخشاب وزجاج ورخام وستائر وسجاجيد وجميع أنواع الأجهزة</div>
+                     <hr id="Card1-card-item4">
+                     <div id="Card1-card-item5"><a href="tel:01002575841">إتصل الأن</a></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_Divider5">
+      <div id="Divider5">
+         <div id="wb_Heading3">
+            <h2 id="Heading3">خدمات</h2>
+         </div>
+      </div>
+   </div>
+   <div id="wb_galleryLayoutGrid">
+      <div id="galleryLayoutGrid">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+                  <div id="wb_galleryCollage">
+                     <div id="galleryCollage">
+                        <div class="thumbnails">
+                           <figure class="thumbnail">
+                              <a href="images/46522781_2008751039183332_7751838850229469184_n.jpg"><img alt="" src="images/46522781_2008751039183332_7751838850229469184_n.jpg" class="image"></a>
+                           </figure>
+                           <figure class="thumbnail">
+                              <a href="images/96082384_676635066214761_4640366723403350016_n.jpg"><img alt="" src="images/96082384_676635066214761_4640366723403350016_n.jpg" class="image"></a>
+                           </figure>
+                           <figure class="thumbnail">
+                              <a href="images/132706835_104263634929188_1161669501407863448_n.jpg"><img alt="" src="images/132706835_104263634929188_1161669501407863448_n.jpg" class="image"></a>
+                           </figure>
+                           <figure class="thumbnail">
+                              <a href="images/136088122_1698350403703369_7653464861533981361_n.jpg"><img alt="" src="images/136088122_1698350403703369_7653464861533981361_n.jpg" class="image"></a>
+                           </figure>
+                           <figure class="thumbnail">
+                              <a href="images/152422495_128736379148580_595104612872301893_n.jpg"><img alt="" src="images/152422495_128736379148580_595104612872301893_n.jpg" class="image"></a>
+                           </figure>
+                           <figure class="thumbnail">
+                              <a href="images/154267369_3264867296946271_2604782674254890978_n.jpg"><img alt="" src="images/154267369_3264867296946271_2604782674254890978_n.jpg" class="image"></a>
+                           </figure>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_banner">
+      <div id="banner-overlay"></div>
+      <div id="banner">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_bannerHeading1">
+                  <h2 id="bannerHeading1">أسطول سيارات شركة المستقبل لنقل العفش</h2>
+               </div>
+               <div id="wb_bannerHeading2">
+                  <h3 id="bannerHeading2">نعمل على مدار الاسبوع والعطلات الرسمية </h3>
+               </div>
+               <a id="bannerButton" href="tel:01002575841">خدمة 24 ساعة</a>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_attractions">
+      <div id="attractions">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+                  <div id="wb_attractionsCarousel">
+                     <div id="attractionsCarousel" class="carousel slide">
+                        <div class="carousel-inner">
+                           <div class="carousel-item frame-1 active">
+                              <div class="carousel-innerframe">
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-2">
+               <div class="col-2-padding">
+                  <a id="attractionsButton" href="tel:01002575841">اتصل اليوم وإحجز ميعاد</a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_Divider4">
+      <div id="Divider4">
+         <div id="wb_Heading2">
+            <h2 id="Heading2">تواصل معنا فى أى وقت</h2>
+         </div>
+      </div>
+   </div>
+   <div id="wb_contactForm">
+      <div id="contactForm">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+                  <div id="wb_contactText1">
+                     <p style="font-size:13px;line-height:25px;color:#4F4F4F;"><span style="font-size:27px;line-height:49.5px;font-weight:bold;">عن شركتنا</span></p>
+                  </div>
+                  <div id="wb_attractionsText1">
+                     <p style="font-size:16px;line-height:30px;color:#6D6D6D;">شركتنا من اكبر شركات نقل الاثاث فى مصر توفر لكم كافه الطرق الامنه للانتقال من مكان لاخر من خلال احدث المعدات و السيارات المغلقه و نقل الاثاث بالونش الاكثر امان طاقم عمل مدرب على النقل بشكل مناسب و الحفاظ على الموبيليا</p>
+                     <p style="font-family:Arial;font-size:15px;line-height:16.5px;">&nbsp;</p>
+                  </div>
+                  <a id="contactButton" href="tel:01002575841">تواصل معنا</a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_footer">
+      <div id="footer">
+         <div class="row">
+            <div class="col-1">
+            </div>
+            <div class="col-2">
+               <div id="wb_footerText">
+                  <p style="font-size:12px;line-height:22.5px;color:#FFFFFF;">جميع الحقوق محفوظة لشركة المستقبل لنقل العفش © 2021</p>
+               </div>
+            </div>
+            <div class="col-3">
+               <div id="wb_footerIcon1">
+                  <a href="./index.html" target="_blank"><div id="footerIcon1"><i class="fa fa-facebook-square"></i></div></a>
+               </div>
+               <div id="wb_footerIcon2">
+                  <a href="./index.html" target="_blank"><div id="footerIcon2"><i class="fa fa-instagram"></i></div></a>
+               </div>
+               <div id="wb_footerIcon3">
+                  <a href="./index.html" target="_blank"><div id="footerIcon3"><i class="fa fa-snapchat-ghost"></i></div></a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="Layer1">
+      <div id="wb_Shape1">
+         <a href="tel:01002575841"><div id="Shape1"><div id="Shape1_text"><span style="color:#000000;font-family:Cairo;font-size:11px;">إتصل الان</span></div></div></a></div>
+      <div id="wb_IconFont1">
+         <a href="tel:01002575841"><div id="IconFont1"><i class="fa fa-phone-square"></i></div></a></div>
+   </div>
+</body>
+</html>
